@@ -36,7 +36,9 @@ export default function Form() {
             <Input  todos={todos}
 
             /> 
-                <Footer count = {active.length} /> 
+                <Footer count = {todos.length} 
+                        // compTrue = {todos.find(x => !x.isComplete)}
+                /> 
 
         </div>
     )

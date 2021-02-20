@@ -16,7 +16,9 @@ export default function Footer(props){
             </ul>
              
             <div>
-                <a className ="clearComp" href ="#" onClick = {()=> {dispatch({type: 'CLEAR_COMPLETED'})}}>Clear Completed</a>
+            <a className = "clearComp" href ="#" onClick = {()=> {dispatch({type: 'CLEAR_COMPLETED'})}}>Clear Completed</a>
+
+                {/* <a className = {props.compTrue ? "visible clearComp" :"clearComp invisible" } href ="#" onClick = {()=> {dispatch({type: 'CLEAR_COMPLETED'})}}>Clear Completed</a> */}
             </div>
         </div>
         :null

@@ -125,6 +125,8 @@
 }
 .strike{
   text-decoration: line-through;
+  color: rgb(187, 184, 184);
+  font-weight: light;
 }
 
 .clearComp {
@@ -132,4 +134,15 @@
   color: black;
   margin-left: 90px;
 
+}
+
+.visible {
+  visibility: hidden;
+}
+
+.resultContainer .viewThisResult {
+  display: none;
+}
+.resultContainer:hover .viewThisResult {
+  display: inline;
 }
