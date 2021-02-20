@@ -9,7 +9,7 @@ export default function Form() {
     console.log(globalState.state)
     const todos = globalState.state.todos 
     // const complete = globalState.state.complete
-    // const active = globalState.state.active
+    const active = globalState.state.active
     // const all = globalState.state.active
 
     const { dispatch } = globalState;
@@ -35,12 +35,8 @@ export default function Form() {
             
             <Input  todos={todos}
 
-                    // complete={complete}
-                    // active={active}
             /> 
-                <Footer count = {todos.length}
-                /> 
-                {/* <Footer /> */}
+                <Footer count = {active.length} /> 
 
         </div>
     )

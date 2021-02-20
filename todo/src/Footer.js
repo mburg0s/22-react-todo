@@ -2,7 +2,6 @@ import {useContext} from 'react'
 import { store } from './Provider'
 
 export default function Footer(props){
-    console.log(props.count, 'count')
     const globalState = useContext(store)
     const { dispatch } = globalState
 
