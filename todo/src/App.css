@@ -6,7 +6,7 @@
 
 .mainContainer {
   background-color : #f5f5f5;
-  width: 70%;
+  width: 50%;
   height: 700px;
   text-align: center;
   align-content: center;
@@ -14,7 +14,6 @@
   margin-top: 30px;
   margin-bottom: 30px;
   font-size: 14px;
-  /* align-items: center; */
 
 }
 
@@ -41,13 +40,13 @@
   /* text-indent: -20px; */
 }
 
+
 .titleCon{
   color:rgb(245, 225, 228);
   font-size: 100px;
-  font-family: 'Arial';   
+  font-family:  'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.4em;
   font-weight: 5;
-  /* font-style: ; */
-
 
 }
 
@@ -55,31 +54,82 @@
   font-size: 24px;
   border: 2px solid rgba(231, 228, 228, 0.377);
   border-width: thin;
-  /* width: 70%; */
+  width: 100%;
   font-size: 24px;
   background-color: white;
   padding:16px 16px 16px 25px;
   text-align: left;
-  text-indent: 35px;
-  /* list-style: none; */
-  /* align-items: center; */
+  display: grid;
+  grid-template-columns: 2em 1fr 2em;
 
 }
 .listTodoCon {
-  display: column;
   list-style: none;
   width: 80%;
   background-color: white;
-  -webkit-box-shadow: 0px 10px 13px -7px #000000, 0px 2px 15px 0px rgba(0,0,0,0); 
-  box-shadow: 0px 10px 13px -7px #000000, 0px 2px 15px 0px rgba(0,0,0,0);
-  margin-left: 101px;
-
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+.task {
+  grid-column-start: 2;
 }
 .checkComplete {
-  height: 35px;
+  height: 25px;
+  width: 25px;
+  grid-column-start: 1;
+}
+
+
+
+
+.btnDelete {
+  font-size: 20px;
   width:20px;
-  position: absolute;
-  left: 340px;
-  top: 220px;
-  
+  grid-column-start:3;
+  background-color: transparent;
+  border-style: none;
+
+}
+.footerCon {
+  display: flex;
+  height: 40px;
+  width: 80%;
+  background-color: white;
+  border: 1px solid rgb(231, 228, 228);
+  padding:16px 16px 16px 10px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 0px 2px 15px 0px rgba(0,0,0,0); 
+  box-shadow: 0px 10px 13px -7px #000000, 0px 2px 15px 0px rgba(0,0,0,0);
+
+
+
+}
+.listFooter {
+  list-style: none;
+  display: flex;
+  justify-content:center;
+  border: none;
+  background-color:transparent;
+  outline: none;
+  margin-left: 70px;
+
+}
+
+.listFooter a{
+  /* align-items:center; */
+  text-decoration: none;
+  color: black;
+  padding: 18px;
+}
+.strike{
+  text-decoration: line-through;
+}
+
+.clearComp {
+  text-decoration: none;
+  color: black;
+  margin-left: 90px;
+
 }

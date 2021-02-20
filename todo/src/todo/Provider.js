@@ -1,6 +1,6 @@
 import { createContext, useReducer } from 'react'
 
-const initialState = {todos: [], count: 0, banana: false};
+const initialState = {todos: [[{id: 1, description: 'hello'}, {id: 2, description: 'bye'}]], count: 0, banana: false};
 export const store = createContext(initialState);
 // const store = createContext(initialState);
 const { Provider } = store;
@@ -13,6 +13,15 @@ function todoReducer(state, action){
             return {...state, todos: [...state.todos, action.payload]}
         case 'INCREMENT':
             return {...state, count: state.count + 1}
+        case 'DECREMENT':
+            return {...state, count: state.count - 1}
+        case 'INCREMENT_COUNT_BY':
+            // alert('hello ')
+            return {...state, count: state.count + action.payload}
+        case 'DELETE_TODO':
+            console.log (state, action)
+            // return {...state, todos: state.todos.filter(item=> item.id==action.payload)}
+
         default:
           throw new Error();
       };

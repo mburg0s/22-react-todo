@@ -12,10 +12,14 @@ export default function Todo() {
     function handleSubmit(e) {
         e.preventDefault()
         const action = {type: 'ADD_TODO', payload: text}
-        // console.log(action)
         dispatch({type: 'INCREMENT'})
         dispatch({type: 'ADD_TODO', payload: text})
         setText('')
+    }
+    function handleClick(num) {
+        // dispatch({type: 'INCREMENT_COUNT_BY', payload: 3})
+        dispatch({type: 'DELETE_TODO', payload: num})
+
     }
     return (
         <div>
@@ -25,9 +29,11 @@ export default function Todo() {
                 <input type="text" value={text} onChange={(e) => setText(e.target.value)} />
             </form>
                 <TodoList  todos={todos}/>
-            {/* <ul>
-                {todos.map(todo => <li>{todo}</li>)}
-            </ul> */}
+                {/* <button onClick={handleClick}>Decrement </button> */}
+                {/* <button onClick={handleClick}>Increment </button> */}
+                {/* <button onClick={handleClick(1)}>Delete ID </button> */}
+
+
         </div>
     )
 }
